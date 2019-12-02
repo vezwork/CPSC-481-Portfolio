@@ -3,36 +3,120 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <title>CPSC 481 Unrestricted</title>
         <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
             body{
-                font-family: sans-serif;
+                font-family: 'Varela Round', sans-serif;
                 margin:40px auto;
-                max-width:650px;
+                max-width:850px;
                 line-height:1.6;
                 font-size:18px;
                 color:#444;
                 padding:0 10px
             }
             h1,h2,h3{
-                line-height:1.2
+                color: black;
+                line-height:1.2;
+                letter-spacing: 2px;
+            }
+
+            .btn {
+                color: white;
+                display: inline-block;
+                border-radius: 83px;
+                background: #F85B5B;
+                font-size: 20px;
+                padding: 15px 40px;
+                font-weight: bold;
+                text-align: center;
+                cursor: pointer;
+                
+                transition: 0.3s background-color, 0.3s transform cubic-bezier(.28,.01,.29,1.67);
+            }
+            .btn:hover {
+                background-color: #FB6F6F;
+                transform: scale(1.1, 1.1);
+            }
+
+            @keyframes fun1 {
+                0% { transform: translate(0, 0) rotateZ(0deg) }
+
+                70% { transform: translate(0, 0) rotateZ(0deg) }
+                90% { transform: translate(-140px, -35px) rotateZ(0deg) }
+                100% { transform: translate(-140px, -35px) rotateZ(10deg) }
+            }
+            @keyframes fun11 {
+                0% { opacity: 0 }
+
+                49% { opacity: 0 }
+                50% { opacity: 1 }
+            }
+
+            @keyframes fun2 {
+                17.5% { transform: translate(-90px, -65px) }
+                52.5% { transform: translate(-220px, -385px) }
+                87.5% { transform: translate(-165px, -825px) }
+            }
+
+            .promo {
+                position: relative; height: 300px; width: 320px; margin: 40px 120px; float: left;
+                overflow: hidden;
+            }
+
+            @media (max-width:900px) {
+                .promo {
+                    margin: 0 auto;
+                }
             }
         </style>
     </head>
     <body>
+        
         <svg xmlns="http://www.w3.org/2000/svg" width="234" height="63" viewBox="0 0 234 63">
             <g id="Group_9" data-name="Group 9" transform="translate(-966 -24)">
-              <circle id="Ellipse_3" data-name="Ellipse 3" cx="31.5" cy="31.5" r="31.5" transform="translate(966 24)" fill="#f85b5b"/>
-              <text id="_Un_Restricted_" data-name=" Un Restricted " transform="translate(976 68)" fill="#f85b5b" font-size="36" font-family="Linotte-Bold, Linotte ☞" font-weight="700"><tspan x="0" y="0"> </tspan><tspan y="0" fill="#fff">Un </tspan><tspan y="0">Restricted</tspan><tspan y="0" font-size="30"> </tspan></text>
+            <circle id="Ellipse_3" data-name="Ellipse 3" cx="31.5" cy="31.5" r="31.5" transform="translate(966 24)" fill="#f85b5b"/>
+            <text id="_Un_Restricted_" data-name=" Un Restricted " transform="translate(976 68)" fill="#f85b5b" font-size="36" font-family="Linotte-Bold, Linotte ☞" font-weight="700"><tspan x="0" y="0"> </tspan><tspan y="0" fill="#fff">Un </tspan><tspan y="0">Restricted</tspan><tspan y="0" font-size="30"> </tspan></text>
             </g>
-          </svg>
-          
-        <h1>CPSC 481 Project Portfolio</h1>
-        <p>Group members: Rumika Mascarenhas, Panagiota Fytopoulou, Elliot Evans, Neera Patadia, Favian Silva</p>
-        <hr>
-        <p>We will put more information about our project here as it develops, and make the site look a bit better ;)</p>
-        <hr>
+        </svg>
+        <img src="promo1.png" style="object-fit: contain; height: 550px; max-height: 70vh; max-width: 100%; float: right;">
+        
+        <div style="margin: 12% 0;">
+            <h1>Find food that's friendly to you.</h1>
+            <p>A simple way to find restaurants that meet your dietary restrictions.</p>
+            <a href="#more-info"><div class="btn">learn more</div></a>
+        </div>
+        <h2 id="more-info" style="margin: 200px 0 60px;">Everything you need to find great food nearby.</h1>
+        <p>
+            Unrestricted helps you to find restaurants that have food options that suit your needs. 
+            Unrestricted exists to make it easier to find information on whether a food establishment meets your dietary requirements, is close to your current location, and is high quality. 
+        </p>
+        <div class="promo">
+            <img src="promo21.png" style="object-fit: contain; height: 150px; position: absolute;">
+            <img src="promo22.png" style="object-fit: contain; height: 150px; position: absolute; animation-name: fun11;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;">
+            <img src="pointeremoji.png" style="object-fit: contain; height: 70px; position: absolute; top: 75px; left: 235px; animation-name: fun1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;">
+        </div>
+        <h4>Enter your dietary restrictions</h4>
+        <p>
+            Unrestricted makes it easy to get started. Select from the most common dietary restrictions or input your own.
+        </p>
+        <div class="promo" style="float: right;">
+            <img src="promo3.png" style="object-fit: contain; width: 550px; position: absolute; transform: translate(-90px, -65px); animation-name: fun2; 
+            animation-duration: 8s;
+            animation-iteration-count: infinite;">
+        </div>
+        <h4 style="clear: left;">Search for an awesome place to eat.</h4>
+        <p>
+            You can look on the map, search in your area, or see our recommended restaurants and dishes. Unrestricted tries it's best to find you a place that is friendly to your food needs.
+        </p>
+        <p style="clear: both; padding-top: 100px;">UnRestricted was created by Rumika Mascarenhas, Panagiota Fytopoulou, Elliot Evans, Neera Patadia, and Favian Silva for CPSC 481.</p>
         <h2>Deliverable 1</h2>
         <ul>
             <li><a href="./teamcontract_signed.pdf">Signed Team Contract</a></li>
@@ -93,7 +177,12 @@
             <li><a href="./stage4/Stage Four Presentation UnRestricted.pptx">Stage 4 Presentation</a></li>
             <li><a href="./stage4/InitialPrototype/UnRestricted-initial.xd">Adobe XD Initial Prototype</a></li>
             <li><a href="./stage4/UnRestricted Final.xd">Adobe XD Improved Prototype</a></li>
-            
+        </ul>
+        <h2>Deliverable 5 - Final</h2>
+        <ul>
+            <li><a href="./stage5/Final Report - CPSC 481.pdf">Stage 5 Report</a></li>
+            <li><a href="./stage5/CPSC 481 - Final Presentation.pptx">Stage 5 Presentation</a></li>
+            <li><a href="./stage5/UnRestricted.xd">Adobe XD Prototype</a></li>
         </ul>
     </body>
 </html>
